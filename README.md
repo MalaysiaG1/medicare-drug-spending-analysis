@@ -19,9 +19,9 @@ This project analyzes Medicare Part D drug spending from 2019 to 2023 using SQL 
 - Certain states show significantly higher costs per claim, signaling potential access or pricing disparities
 
 ## Files Included
-- `SQL/`: Cleaning and aggregation queries for BigQuery (if available)
-- `tableau/`: Packaged workbook (.twbx) and dashboard export
-- `README.md`: Project summary and insights
+- SQL/: Cleaning and aggregation queries for BigQuery (if available)
+- tableau/: Packaged workbook (.twbx) and dashboard export
+- README.md : Project summary and insights
 
 ## View Dashboard
 [Click here to view the full dashboard](https://public.tableau.com/app/profile/malaysia.goss/viz/RxSpendAnalysisMedicarePartD20192023/Dashboard1)
