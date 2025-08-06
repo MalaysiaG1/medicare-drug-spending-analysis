@@ -25,3 +25,7 @@ This project analyzes Medicare Part D drug spending from 2019 to 2023 using SQL 
 
 ## View Dashboard
 [Click here to view the full dashboard](https://public.tableau.com/app/profile/malaysia.goss/viz/RxSpendAnalysisMedicarePartD20192023/Dashboard1)
+
+## Data Source  
+This project is based on the **Medicare Part D Spending by Drug** dataset from the Centers for Medicare & Medicaid Services (CMS).  
+[View dataset on data.cms.gov](https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid-spending-by-drug/medicare-part-d-spending-by-drug)
