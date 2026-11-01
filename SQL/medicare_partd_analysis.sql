@@ -1,19 +1,18 @@
 use medicare_partd;
 
--- total medicare spending 2022 (KPI)
-select
-    round(sum(Tot_Spndng_2022) / 1e9, 2) as total_spending_2022_billions
-from medicaid_spending;
+-- total spending 2022
+select sum(Tot_Spndng_2022) from medicaid_spending
+WHERE Mftr_Name = 'Overall' and Tot_Spndng_2022 is not null;
 
--- total benes impacted 2022 (KPI)
-select
-    round(sum(Tot_Benes_2022) / 1e6, 2) as tot_bene_2022_millions
-from medicaid_spending;
+-- average spend per claim 2022
+select 
+    round(sum(Tot_Spndng_2022) / sum(Tot_Clms_2022), 2) as avg_cost_per_claim_2022
+from medicaid_spending
+where Mftr_Name = 'Overall';
 
--- total claims processed 2022 (KPI)
-select
-    round(sum(Tot_Clms_2022) / 1e6, 2) as tot_claims_2022_millions
-from medicaid_spending;
+-- total claims 2022
+select sum(Tot_Clms_2022) from medicaid_spending
+WHERE Mftr_Name = 'Overall' and Tot_Clms_2022 is not null;
 
 -- top 10 drugs total spending on drugs 2018
 select 
@@ -87,6 +86,17 @@ from medicaid_spending
 where Tot_Spndng_2022 is not null
 order by Tot_Spndng_2022 desc
 limit 10;
+
+-- total spending by manuf 2022
+select 
+Mftr_Name,
+round(sum(Tot_Spndng_2022),2) as Total_Spending_2022
+from medicaid_spending
+WHERE Mftr_Name != 'Overall'
+group by Mftr_Name
+order by Total_Spending_2022 desc
+limit 10
+;
 
 -- top 10 drugs highest CAGR unit cost
 select 
