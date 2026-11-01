@@ -2,7 +2,7 @@
 
 **Tools Used:** SQL (MySQL Workbench), Tableau  
 **Data Source:** Centers for Medicare & Medicaid Services (CMS)  
-**Interactive Dashboard:** [View on Tableau Public](https://public.tableau.com/app/profile/malaysia.goss/viz/ClinicalPharmacyOperationsAnalytics/Dashboard1)
+**Interactive Dashboard:** [View on Tableau Public](https://public.tableau.com/app/profile/malaysia.goss/viz/RxSpendAnalysisMedicarePartD20192023/Dashboard1)
 
 ---
 
@@ -41,7 +41,7 @@ This project analyzes longitudinal Medicare Part D prescription drug spending an
 
 ## Dashboard Preview
 
-[Click here to view the interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/malaysia.goss/viz/ClinicalPharmacyOperationsAnalytics/Dashboard1)
+[Click here to view the interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/malaysia.goss/viz/RxSpendAnalysisMedicarePartD20192023/Dashboard1)
 
 ---
 
