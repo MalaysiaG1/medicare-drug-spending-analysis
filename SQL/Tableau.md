@@ -1,11 +1,4 @@
 ## Executive Dashboard: Medicare Part D Drug Spending Insights (2022)
-
-[![Medicare Part D Drug Spending Insights (2022)](./images/medicare-part-d-spending-insights-2022.png)](https://public.tableau.com/app/profile/malaysia.goss/viz/MedicarePartDDrugSpendingInsights2022/Dashboard1)
-
-*Click the dashboard image above to view and interact with the live visualization on Tableau Public.*
-
----
-
 ### Live Interactive Tableau Dashboard
 You can view the full interactive dashboard with interactive tooltips and cross-filtering here:  
 🔗 **[View on Tableau Public](https://public.tableau.com/app/profile/malaysia.goss/viz/MedicarePartDDrugSpendingInsights2022/Dashboard1)**
