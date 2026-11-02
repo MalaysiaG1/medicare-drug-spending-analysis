@@ -10,4 +10,4 @@ You can view the full interactive dashboard with interactive tooltips and cross-
 - **Specialty Financial Burden:** High-cost orphan and specialty biologics demonstrate extreme spend concentration, exceeding **$600K–$1.3M+ average annual spend per beneficiary** despite treating small patient cohorts (<100 beneficiaries).
 - **Utilization Intensity & Clinical Governance:** **Clozapine** demonstrated the highest utilization intensity (**80.65 claims per beneficiary**), reflecting weekly dispensing restrictions mandated by the FDA REMS absolute neutrophil count (ANC) safety monitoring program.
 
-[![Medicare Part D Drug Spending Insights (2022)](./Medicare%20Part%20D%20Drug%20Spending%20Insights%20(2022).png)](https://public.tableau.com/app/profile/malaysia.goss/viz/MedicarePartDDrugSpendingInsights2022/Dashboard1)
+
