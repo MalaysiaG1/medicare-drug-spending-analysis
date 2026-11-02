@@ -50,10 +50,7 @@ Looking at total claims per beneficiary gave a clear picture of real-world fill 
 ## Repository Structure
 
 ```text
-├── sql/
-│   └── medicare_partd_analysis.sql           # Aggregations, CAGR, and utilization ratio queries
-├── tableau/
-│   └── Medicare_PartD_Spending_2022.twbx     # Packaged Tableau workbook
-├── images/
-│   └── Medicare Part D Drug Spending Insights (2022).png  # Dashboard preview
-└── README.md                                 # Project documentation
+├── SQL/                                      # MySQL scripts and analytical queries
+├── Tableau.md                                # Tableau documentation and dashboard breakdown
+├── Medicare Part D Drug Spending Insights (2022).png # Dashboard preview image
+└── README.md                                 # Executive summary and project documentation
