@@ -11,3 +11,4 @@ You can view the full interactive dashboard with interactive tooltips and cross-
 - **Utilization Intensity & Clinical Governance:** **Clozapine** demonstrated the highest utilization intensity (**80.65 claims per beneficiary**), reflecting weekly dispensing restrictions mandated by the FDA REMS absolute neutrophil count (ANC) safety monitoring program.
 
 
+![Medicare Part D Drug Spending Insights (2022)](./Medicare%20Part%20D%20Drug%20Spending%20Insights%20(2022).png)
