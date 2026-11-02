@@ -1,61 +1,59 @@
 # Longitudinal Rx Spend & Utilization Analysis: Medicare Part D (2018–2022)
 
-**Tools Used:** SQL (MySQL Workbench), Tableau Desktop / Tableau Public  
-**Data Source:** Centers for Medicare & Medicaid Services (CMS) Medicare Part D Spending by Drug  
-**Interactive Dashboard:** [View on Tableau Public](https://public.tableau.com/app/profile/malaysia.goss/viz/MedicarePartDDrugSpendingInsights2022/Dashboard1)
+Tools: SQL (MySQL Workbench), Tableau Desktop / Tableau Public  
+Data: CMS Medicare Part D Spending by Drug  
+Dashboard: [View on Tableau Public](https://public.tableau.com/app/profile/malaysia.goss/viz/MedicarePartDDrugSpendingInsights2022/Dashboard1)
 
 ---
 
 ## Dashboard Preview
 
 [![Medicare Part D Drug Spending Insights (2022)](./Medicare%20Part%20D%20Drug%20Spending%20Insights%20(2022).png)](https://public.tableau.com/app/profile/malaysia.goss/viz/MedicarePartDDrugSpendingInsights2022/Dashboard1)  
-*Click the preview image above to interact with the live dashboard on Tableau Public.*
+*Click the preview to explore the live dashboard on Tableau Public.*
 
 ---
 
-## Project Overview
+## Overview
 
-This project analyzes longitudinal Medicare Part D prescription drug spending, claims, and beneficiary utilization data spanning 2018 through 2022. By pairing database querying in MySQL with executive data visualization in Tableau, this analysis evaluates macro spending trends, pharmaceutical market concentration, unit price inflation, and medication utilization patterns across national Medicare populations.
-
-The primary objective is to translate administrative claims data into actionable managed care and health informatics insights—distinguishing between price-driven cost escalation and volume-driven utilization while highlighting high-burden clinical therapies.
+I built this project to analyze longitudinal Medicare Part D prescription spending, claims volume, and patient utilization trends from 2018 through 2022. Using MySQL to query and clean the CMS data and Tableau to build the final dashboard, my goal was to look past surface-level numbers and understand what actually drives prescription drug costs—separating pure unit price inflation from volume demand while highlighting high-burden clinical therapies.
 
 ---
 
-## Executive Program Metrics (2022)
+## 2022 Program Snapshot
 
-* **Gross National Part D Spending:** **$216 Billion** across all covered outpatient brand and generic pharmaceuticals.
-* **Total Prescription Claims:** **1.19 Billion** standard 30-day fills, averaging **$182.19 per claim**.
-* **Aggregate Beneficiary Encounters:** **80.4 Million** drug-specific patient utilization instances.
+* Gross Part D Spend: $216B across all covered brand and generic medications
+* Total Claims Processed: 1.19B standard 30-day fills (averaging $182.19 per claim)
+* Aggregate Beneficiary Encounters: 80.4M drug-specific patient encounters
 
-> **Methodological Note:** In CMS drug-level reporting, beneficiary counts represent aggregate drug encounters rather than unduplicated unique individuals. Patients taking multiple distinct therapies are captured within each respective drug's profile. Gross spend figures reflect overall program expenditures prior to post-sale manufacturer rebates.
+Note on the data: CMS records beneficiary counts per drug entity rather than unduplicated unique people across the entire program. If a patient is taking three maintenance meds, they show up once under each drug. Also, gross spend reflects total program dollars before post-sale manufacturer rebates.
 
 ---
 
-## Key Analytical Insights & Clinical Findings
+## Key Findings
 
 ### 1. Manufacturer Market Share & Portfolio Concentration
-Gross Part D spending is heavily concentrated among top multinational manufacturers—led by Bristol Myers Squibb, Novo Nordisk, Boehringer Ingelheim, and Eli Lilly. High-expenditure brand franchises in cardiometabolic disease (e.g., SGLT2 inhibitors, GLP-1 receptor agonists) and oral anticoagulation drive billions in baseline program liabilities, making them pivotal targets for formulary tier design and manufacturer rebate negotiation.
+Gross Part D spend is heavily consolidated among a small group of multinational manufacturers, especially Bristol Myers Squibb, Novo Nordisk, Boehringer Ingelheim, and Eli Lilly. High-spend brand therapies for cardiometabolic disease (like SGLT2s and GLP-1s) and anticoagulants account for billions in baseline costs, making them the primary targets for formulary tiering, rebate negotiations, and utilization management.
 
 ### 2. High-Burden Specialty Therapies (Cost vs. Volume)
-Evaluating cost per beneficiary against patient volume revealed that catastrophic program costs are often driven by ultra-orphan and specialty biologic therapies. Medications such as Strensiq, Myalept, and Vimizim exceed **$600,000 to over $1.3 Million in average annual spend per beneficiary**, despite treating cohorts of fewer than 100 to 500 patients nationwide. These findings illustrate where health plans and PBMs concentrate intensive utilization management, such as prior authorization (PA) and ongoing reauthorization criteria.
+Looking at cost per beneficiary against patient count shows how catastrophic specialty biologics can be on a health plan budget. Rare disease therapies like Strensiq, Myalept, and Vimizim run between $600K to over $1.3M in annual spend per patient, even though they treat fewer than 100 to 500 patients nationwide. This really highlights why managed care plans rely on strict prior authorizations and ongoing clinical reauthorizations to manage risk.
 
 ### 3. Unit Cost Inflation (5-Year CAGR Price Growth)
-Calculating 5-year Compound Annual Growth Rates (CAGR) in price per dosage unit isolated drugs where spending was driven by unit price escalation rather than rising patient demand. Several legacy and specialized agents (including Phospholine Iodide, Meperidine HCl, and Lactulose) demonstrated unit price CAGRs exceeding **70% to 111%** from 2018 to 2022, underscoring pricing pressure from supply chain vulnerabilities and limited multi-source generic competition.
+Calculating the 5-year CAGR in price per dosage unit helped isolate drugs where spending spikes came from pure price hikes rather than more patients taking the drug. Several older, legacy products—including Phospholine Iodide, Meperidine HCl, and Lactulose—showed 5-year price CAGRs between 70% and 111%, pointing directly to supply chain issues and lack of generic competition.
 
-### 4. Medication Utilization Intensity & Safety Monitoring (REMS)
-Analyzing the ratio of total prescription claims to total beneficiaries surfaced distinct patient adherence profiles:
-* **Adherence Proxies:** Chronic maintenance regimens demonstrated expected maintenance frequencies of 10–12 claims per year.
-* **Clinical Protocol & REMS Governance:** **Clozapine** emerged as a significant operational outlier at **80.65 claims per beneficiary**. This finding reflects mandatory clinical governance: under the **FDA Clozapine REMS** program, requirements for ongoing Absolute Neutrophil Count (ANC) blood monitoring restrict dispensing to weekly or bi-weekly supplies, resulting in 52+ distinct claim adjudications per patient annually.
+### 4. Utilization Intensity & REMS Adherence
+Looking at total claims per beneficiary gave a clear picture of real-world fill patterns:
+* Standard chronic maintenance therapies sat right around the expected 10 to 12 fills per year.
+* Clozapine stood out as a huge outlier at 80.65 claims per beneficiary. This actually reflects real clinical safety workflow: because of the mandatory FDA Clozapine REMS program, patients need regular Absolute Neutrophil Count (ANC) blood labs before getting a refill. That restricts dispensing to weekly or bi-weekly supplies, easily pushing an adherent patient over 52 claims a year.
 
 ---
 
-## Project Structure
+## Repository Structure
 
 ```text
 ├── sql/
-│   └── medicare_partd_analysis.sql           # Data aggregation, CAGR calculations, and ratio queries
+│   └── medicare_partd_analysis.sql           # Aggregations, CAGR, and utilization ratio queries
 ├── tableau/
-│   └── Medicare_PartD_Spending_2022.twbx     # Packaged Tableau dashboard workbook
+│   └── Medicare_PartD_Spending_2022.twbx     # Packaged Tableau workbook
 ├── images/
-│   └── Medicare Part D Drug Spending Insights (2022).png  # High-resolution dashboard preview
-└── README.md                                 # Executive summary and analytical methodology
+│   └── Medicare Part D Drug Spending Insights (2022).png  # Dashboard preview
+└── README.md                                 # Project documentation
